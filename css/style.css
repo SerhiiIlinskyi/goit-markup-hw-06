@@ -290,9 +290,21 @@ body {
   height: 100%;
   background-color: var(--brand-color-backdrop-index);
   opacity: 1;
-  transition: opcity var();
+  transition: opacity var(--brand-color-back) var(--brand-color-line);
 }
-
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 581px;
+  width: 528px;
+  margin: 0;
+  background-color: var(--brand-color-back);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--brand-color-back) var(--brand-color-line);
+  opacity: 1;
+  border-radius: 4px;
+}
 .backdrop.is-hidden {
   width: 100%;
   height: 100%;
@@ -310,20 +322,6 @@ body {
   transition-duration: 250ms;
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50% -50%);
-  height: 581px;
-  width: 528px;
-  margin: 0;
-  background-color: var(--brand-color-back);
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform var() var();
-  opacity: 1;
-  border-radius: 4px;
-}
 .data-modal-close {
   display: flex;
   align-items: center;
@@ -346,6 +344,37 @@ body {
   height: 30px;
   top: 9px;
   right: 10px;
+}
+.modal .data-modal-close:hover,
+.modal .data-modal-close:focus {
+  :var(--brand-color-basic) ;
+}
+.modal-text {
+  font-size: 20px;
+  line-height: 1.7;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+}
+.textarea {
+  resize: none;
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.button-modal {
+  display: flex;
+}
+.button-label {
+  color: var(--brand-color-name);
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+
+  background-color: var(--brand-color-basic);
 }
 /**особенности**/
 .peculiaritiese {
@@ -651,14 +680,8 @@ body {
 }
 
 .footer-social {
-  /**display: flex;
-  /**align-items: center;**/
   color: var(--brand-color-back);
   display: block;
-  /**align-items: center;
-  justify-content: center;**/
-  /**margin-left: 70px;
-  margin-top: 75px;**/
 }
 
 .footer-social-icon {
@@ -668,8 +691,6 @@ body {
 .footer-join {
   margin-bottom: 20px;
   padding-top: 0px;
-  /**justify-content: center;
-  align-items: center;**/
 }
 
 .footer-social {
@@ -698,6 +719,11 @@ body {
   transition-duration: 250ms;
 }
 
+.footer-blank {
+}
+.footer-blank-name {
+  color: var(--brand-color-name);
+}
 /**customers**/
 .regular-customers {
   font-size: 36px;

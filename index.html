@@ -536,14 +536,35 @@
                 </ul>
             </div>
 
+            <div class="footer-blank">
+                <p class="footer-blank-name">
+                    Подпишитесь на рассылку
+                </p>
+                <form name="Подпишитесь" autocomplete="on" novalidate>
+            
+                    <label class="label-footer" for="">
+                       <!--  Подпишитесь на рассылку -->
+                        
+                        <input type="text" name="Имя">
+                                   
+                    </label>
+                                         
+                    <button class="button-label" type="submit">Отправить</button>
+                    <svg class="customers-icon" width="24" height="24">
+                        <use href="./img/modal.svg#icon"></use>
+                    </svg>
+                </form>
+            
+            </div>
+
         </div>
 
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <p class="">
-                Добрый вечер! Щедрый вечер!
+            <p class="modal-text ">
+                Оставьте свои данные, мы вам перезвоним
             </p>
             <ul>
                 <li class="close">
@@ -552,6 +573,51 @@
                     </a>
                 </li>
             </ul>
+            <form name="modal-form" autocomplete="on" novalidate>
+
+                <label class="label" for="">
+                    Имя
+                    <svg class="customers-icon" width="12" height="12">
+                        <use href="./img/modal.svg#person"></use>
+                    </svg>
+                    <input type="text" name="Имя" >
+                   
+                                      
+
+                </label>
+            
+                <label class="label" for="">
+                    Телефон
+                    <svg class="customers-icon" width="13" height="13">
+                        <use href="./img/modal.svg#phone"></use>
+                    </svg>
+                    <input type="text" name="Телефон">
+                   
+
+                </label>
+
+                <label class="label" for="">
+                    Почта
+                    <svg class="customers-icon" width="13" height="13">
+                        <use href="./img/modal.svg#email"></use>
+                    </svg>
+                    <input type="email" name="Почта">
+                    
+
+                </label>
+
+                <label class="label" for="">
+                    Коментарий
+                    <textarea type="text" name="Коментарий"> </textarea>
+                </label>
+
+                <label class="">
+                    <input type="checkbox" name="" value="" checked >
+                    Соглашаюсь с рассылкой и принимаю Условия договора
+            
+                <button class="button-label" type="submit">Отправить</button>
+            </form>
+            
             <button data-modal-close class="data-modal-close"><svg class="close-modal" width="30" height="30">
                     <use href="./img/close.svg#icon-close-black"></use>
                 </svg></button>
