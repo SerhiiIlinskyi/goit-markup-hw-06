@@ -345,9 +345,9 @@ body {
   top: 9px;
   right: 10px;
 }
-.modal .data-modal-close:hover,
-.modal .data-modal-close:focus {
-  :var(--brand-color-basic) ;
+.data-modal-close:hover .close-modal,
+.data-modal-close:focus .close-modal {
+  fill: var(--brand-color-basic);
 }
 .modal-text {
   font-size: 20px;
@@ -368,14 +368,7 @@ body {
 .button-modal {
   display: flex;
 }
-.button-label {
-  color: var(--brand-color-name);
-  width: 200px;
-  height: 50px;
-  border-radius: 4px;
 
-  background-color: var(--brand-color-basic);
-}
 /**особенности**/
 .peculiaritiese {
   /**padding-left: 215px;**/
@@ -633,6 +626,10 @@ body {
   text-decoration: none;
 }
 
+.button-label-footer {
+  background-color: var(--brand-color-basic);
+}
+
 /**social**/
 .social-link:hover,
 .social-link:focus {
@@ -723,7 +720,43 @@ body {
 }
 .footer-blank-name {
   color: var(--brand-color-name);
+  text-transform: uppercase;
 }
+.label-footer-text {
+  color: var(--brand-color-name);
+  background: var(--brand-color-substrate);
+
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+}
+/* .label-footer:hover .label-footer-text,
+.label-footer:focus .label-footer-text {
+  border-color: var(--brand-color-basic);
+}
+ */
+.customers-icon-footer {
+  fill: var(--brand-color-name);
+  /* margin-top: 10px; */
+  margin-left: 10px;
+}
+.button-label-footer {
+  position: absolute;
+  color: var(--brand-color-name);
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-style: 16px;
+  line-height: 1.87;
+  /*   display: flex; */
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--brand-color-basic);
+}
+
 /**customers**/
 .regular-customers {
   font-size: 36px;
