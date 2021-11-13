@@ -240,6 +240,17 @@ body {
   fill: var(--brand-color-text);
 }
 
+.button-label {
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  position: absolute;
+  margin-left: 164px;
+  border-color: var(--brand-color-basic);
+  background-color: var(--brand-color-basic);
+  color: var(--brand-color-name);
+}
+
 /**index**/
 /**шапка**/
 .hero {
@@ -365,8 +376,16 @@ body {
   flex-direction: column;
   margin-bottom: 10px;
 }
+
+.label .customers-icon:hover,
+.label .customers-icon:focus {
+  box-shadow: var(--brand-color-basic);
+}
 .button-modal {
   display: flex;
+}
+.conditions {
+  color: var(--brand-color-basic);
 }
 
 /**особенности**/
@@ -717,11 +736,17 @@ body {
 }
 
 .footer-blank {
+  margin-left: 93px;
 }
 .footer-blank-name {
   color: var(--brand-color-name);
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
+/* .label-footer {
+  box-shadow: var(--brand-color-link);
+
+} */
 .label-footer-text {
   color: var(--brand-color-name);
   background: var(--brand-color-substrate);
@@ -731,11 +756,11 @@ body {
   height: 50px;
   margin-right: 12px;
 }
-/* .label-footer:hover .label-footer-text,
-.label-footer:focus .label-footer-text {
-  border-color: var(--brand-color-basic);
+
+.subscribe .label-footer-text:hover,
+.subscribe .label-footer-text:focus {
+  border-radius: var(--brand-color-basic);
 }
- */
 .customers-icon-footer {
   fill: var(--brand-color-name);
   /* margin-top: 10px; */
