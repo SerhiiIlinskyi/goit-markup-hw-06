@@ -356,10 +356,10 @@ body {
   top: 9px;
   right: 10px;
 }
-.data-modal-close:hover .close-modal,
+/* .data-modal-close:hover .close-modal,
 .data-modal-close:focus .close-modal {
   fill: var(--brand-color-basic);
-}
+} */
 .modal-text {
   font-size: 20px;
   line-height: 1.7;
@@ -382,7 +382,8 @@ body {
 .label-form-formul {
   display: flex;
   align-items: center;
-
+  /*  width: 400px;
+  height: 24px; */
   margin-bottom: 10px;
   margin-left: 40px;
 }
@@ -396,6 +397,34 @@ body {
 }
 .conditions {
   color: var(--brand-color-basic);
+  padding-right: 10px;
+}
+
+.label-form-position {
+  border-radius: 1px solid var(--brand-color-basic);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.icon-modal .customers-icon:hover,
+.icon-modal .customers-icon:focus,
+.icon-modal:hover .label-form-position,
+.icon-modal:focus .label-form-position {
+  fill: var(--brand-color-basic);
+  border-shadow: var(--brand-color-basic);
+}
+
+.icon-modal {
+  /* font-size: 12px; */
+  display: flex;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  display: inline-block;
+  transform: translateY(-50%);
+  background-color: var(--brand-color-back);
 }
 
 /**особенности**/
