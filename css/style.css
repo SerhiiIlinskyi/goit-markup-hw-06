@@ -15,6 +15,7 @@
   --brand-color-imgbox: rgb(47, 48, 58, 0.8);
   --brand-color-backdrop-index: rgba(0, 0, 0, 0.2);
   --brand-color-basic-overlay: rgba(33, 150, 243, 0.9);
+  --brand-color-label-form: rgba(33, 33, 33, 0.2);
 }
 /**изменения цвета кнопки**/
 .header .color-block:hover,
@@ -294,6 +295,7 @@ body {
 }
 
 .backdrop {
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: fixed;
   top: 0;
   left: 0;
@@ -301,7 +303,6 @@ body {
   height: 100%;
   background-color: var(--brand-color-backdrop-index);
   opacity: 1;
-  transition: opacity var(--brand-color-back) var(--brand-color-line);
 }
 .modal {
   position: absolute;
@@ -311,10 +312,10 @@ body {
   width: 528px;
   margin: 0;
   background-color: var(--brand-color-back);
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--brand-color-back) var(--brand-color-line);
   opacity: 1;
   border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
   width: 100%;
@@ -323,16 +324,25 @@ body {
   opacity: 1;
   visibility: hidden;
   pointer-events: none;
-  /*  transition-duration: 250ms; */
+
+  /*transition-duration: 250ms;*/
   transition-duration: cubic-bezier(0.4, 0, 0.2, 1);
+  /*transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
 }
 
-.backdrop.is-hidden:hover,
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* .backdrop.is-hidden:hover,
 .backdrop.is-hidden:focus {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
-}
-
+} */
 .data-modal-close {
   display: flex;
   align-items: center;
@@ -356,10 +366,10 @@ body {
   top: 9px;
   right: 10px;
 }
-/* .data-modal-close:hover .close-modal,
+.data-modal-close:hover .close-modal,
 .data-modal-close:focus .close-modal {
   fill: var(--brand-color-basic);
-} */
+}
 .modal-text {
   font-size: 20px;
   line-height: 1.7;
@@ -401,30 +411,62 @@ body {
 }
 
 .label-form-position {
+  border: 1px solid var(--brand-color-label-form);
   border-radius: 1px solid var(--brand-color-basic);
+  /* box-sizing: border-box; */
+  border-radius: 4px;
+  padding-left: 42px;
+  width: 448px;
+  height: 40px;
+}
+
+.icon-modal-button:focus-within .customers-icon-modal {
+  fill: var(--brand-color-basic);
+}
+
+.label-form-position:focus-within {
+  border: 1px solid var(--brand-color-basic);
+  border-radius: 4px;
+  outline: none;
+}
+
+.label-form-text {
+  color: var(--brand-color-text);
+  padding-top: 12px;
+  padding-left: 16px;
+  padding-bottom: 12px;
+  padding-right: 16px;
+  width: 448px;
+  height: 120px;
+  margin-top: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
 }
 
-.icon-modal .customers-icon:hover,
-.icon-modal .customers-icon:focus,
-.icon-modal:hover .label-form-position,
-.icon-modal:focus .label-form-position {
-  fill: var(--brand-color-basic);
-  border-shadow: var(--brand-color-basic);
+.label-form-text:focus-within {
+  border: 1px solid var(--brand-color-basic);
+  border-radius: 4px;
+  outline: none;
 }
 
-.icon-modal {
-  /* font-size: 12px; */
+.icon-modal-button {
+  position: relative;
   display: flex;
-  align-items: center;
-  width: 12px;
-  height: 12px;
+  flex-direction: column;
   margin-bottom: 10px;
-  margin-left: 40px;
-  display: inline-block;
+}
+.customers-icon-modal {
+  width: 40px;
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
-  background-color: var(--brand-color-back);
+  pointer-events: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label-checkbox {
+  margin-left: 7px;
 }
 
 /**особенности**/
@@ -794,6 +836,12 @@ body {
   width: 358px;
   height: 50px;
   margin-right: 12px;
+}
+
+.label-footer-text:focus-within {
+  border: 1px solid var(--brand-color-basic);
+  border-radius: 4px;
+  outline: none;
 }
 
 .subscribe .label-footer-text:hover,

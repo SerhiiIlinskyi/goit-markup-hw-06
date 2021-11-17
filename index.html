@@ -583,9 +583,10 @@
                 
                 <label class="label-form label" >
                     Имя
-                    <input type="text" class="label-form-position" name="unser-name">
-                    <span class="icon-modal">
-                        <svg class="customers-icon" width="12" height="12">
+                    
+                    <span class="icon-modal-button ">
+                        <input type="text"  class="label-form-position" name="unser-name">
+                        <svg class="customers-icon-modal" width="12" height="12">
                             <use href="./img/modal.svg#person"></use>
                         </svg>
                     </span>
@@ -596,9 +597,10 @@
                             
                 <label class="label-form label" >
                     Телефон
-                    <input type="tel" class="label-form-position" name="tel">
-                    <span class="icon-modal" > 
-                        <svg class="customers-icon" width="13" height="13">
+                   
+                    <span class="icon-modal-button" > 
+                        <input type="tel" class="label-form-position" name="tel">
+                        <svg class="customers-icon-modal" width="13" height="13">
                             <use href="./img/modal.svg#phone"></use>
                         </svg>
                     </span>
@@ -608,9 +610,10 @@
 
                 <label class="label-form label" >
                     Почта
-                    <input  type="email" class="label-form-position" name="email">
-                    <span class="icon-modal">
-                        <svg class="customers-icon" width="13" height="13">
+                    
+                    <span class="icon-modal-button">
+                        <input type="email" class="label-form-position" name="email">
+                        <svg class="customers-icon-modal" width="15" height="12" >
                             <use href="./img/modal.svg#email"></use>
                         </svg>
                     </span>
@@ -619,12 +622,13 @@
 
                 <label class="label-form" >
                     Коментарий
-                    <textarea name="feedback" rows="5" > </textarea>
+                    
+                    <textarea class="label-form-text" type="text" rows="5" placeholder="Введите текст" >  </textarea>
                 </label>
 
                 <label class="label-form-formul">
-                    <input type="checkbox" name="formul" value="" >
-                    Соглашаюсь с рассылкой и принимаю <a href="" class="conditions"> Условия договора</a>
+                    <input type="checkbox" name="formul" value=""  >
+                    <span class="label-checkbox"> Соглашаюсь с рассылкой и принимаю <a href="" class="conditions"> Условия договора</a></span>
                 </label>
                 <button class="button-label" type="submit">Отправить</button>
 
