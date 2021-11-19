@@ -326,9 +326,9 @@ body {
   visibility: hidden;
   pointer-events: none;
 
-  /*  transition-duration: 250ms;
+  /*transition-duration: 250ms;*/
   transition-duration: cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  /*transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
 }
 
 .backdrop.is-hidden .modal {
@@ -339,8 +339,8 @@ body {
   pointer-events: none;
 }
 
-/* .backdrop.is-hidden:hover ,
-.backdrop.is-hidden:focus  {
+/* .backdrop.is-hidden:hover,
+.backdrop.is-hidden:focus {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 } */
@@ -457,8 +457,6 @@ body {
   margin-bottom: 10px;
 }
 .customers-icon-modal {
-  width: 20px;
-  height: 20px;
   width: 40px;
   position: absolute;
   top: 50%;
@@ -680,8 +678,6 @@ body {
   transition-duration: 250ms;
 }
 .overlay {
-  /* border-left: 1px solid #000;
-  border-right: 1px solid #000; */
   padding-top: 63px;
   padding-left: 24px;
   padding-right: 24px;
@@ -828,14 +824,12 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-/* .label-footer {
-  box-shadow: var(--brand-color-link);
 
-} */
 .label-footer-text {
+  padding-left: 16px;
   color: var(--brand-color-name);
   background: var(--brand-color-substrate);
-  padding-left: 16px;
+
   border-radius: 4px;
   width: 358px;
   height: 50px;
